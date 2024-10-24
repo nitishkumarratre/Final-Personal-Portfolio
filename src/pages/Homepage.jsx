@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react'
 import { gsap } from 'gsap';
 import { NavLink } from 'react-router-dom';
+import Header from '../components/Header';
+import Services from '../components/Services';
+import Portfolio from '../components/Portfolio';
+import Resume from '../components/Resume';
+import Contact from '../components/Contact';
 
 
 
@@ -58,7 +63,7 @@ const Homepage = () => {
     return (
         <>
             <div>
-                {/* Header 
+                {/* preloader 
     ============================================= */}
                 <div className="preloader">
                     <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
@@ -81,83 +86,8 @@ const Homepage = () => {
                 {/* Preloader Area End */}
                 {/* Header 
     ============================================= */}
-                <header>
-                    {/* Start Navigation */}
-                    <nav className="navbar mobile-sidenav navbar-box navbar-default validnavs navbar-sticky">
-                        {/* Start Top Search */}
-                        <div className="top-search">
-                            <div className="container-xl">
-                                <div className="input-group">
-                                    <span className="input-group-addon"><i className="fa fa-search" /></span>
-                                    <input type="text" className="form-control" placeholder="Search" />
-                                    <span className="input-group-addon close-search"><i className="fa fa-times" /></span>
-                                </div>
-                            </div>
-                        </div>
-                        {/* End Top Search */}
-                        <div className="container nav-box d-flex justify-content-between align-items-center">
-                            {/* Start Header Navigation */}
-                            <div className="navbar-header">
-                                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                                    <i className="fa fa-bars" />
-                                </button>
-                                <NavLink onClick={backToTop} className="navbar-brand" to="/">
-                                    <img src="assets/img/logo.png" className="logo" alt="Logo" />
-                                </NavLink>
+                <Header />
 
-                            </div>
-                            {/* End Header Navigation */}
-                            {/* Collect the nav links, forms, and other content for toggling */}
-                            <div className="collapse navbar-collapse" id="navbar-menu">
-                                <img src="assets/img/logo.png" alt="Logo" />
-                                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                                    <i className="fa fa-times" />
-                                </button>
-                                <ul className="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                                    <li className="dropdown">
-                                        <a href="#" className="dropdown-toggle active" data-toggle="dropdown">Home</a>
-                                        <ul className="dropdown-menu">
-                                            <li><a href="/">Home Version Light</a></li>
-                                            <li><a href="/dark">Home Version Dark</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a className="smooth-menu" href="#services">Services</a>
-                                    </li>
-                                    <li>
-                                        <a className="smooth-menu" href="#portfolio">Portfolio</a>
-                                    </li>
-                                    <li>
-                                        <a className="smooth-menu" href="#resume">Resume</a>
-                                    </li>
-                                    <li>
-                                        <a className="smooth-menu" href="#pricing">Pricing</a>
-                                    </li>
-                                    <li>
-                                        <a className="smooth-menu" href="#contact">contact</a>
-                                    </li>
-                                </ul>
-                            </div>{/* /.navbar-collapse */}
-                            <div className="nav-right">
-                                <div className="attr-right">
-                                    {/* Start Atribute Navigation */}
-                                    <div className="attr-nav attr-box">
-                                        <ul>
-                                            <li className="button">
-                                                <a className="smooth-menu" href="#contact">Let's Talk <i className="fas fa-comment-alt" /></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    {/* End Atribute Navigation */}
-                                </div>
-                            </div>
-                        </div>
-                        {/* Overlay screen for menu */}
-                        <div className="overlay-screen" />
-                        {/* End Overlay screen for menu */}
-                    </nav>
-                    {/* End Navigation */}
-                </header>
                 {/* End Header */}
                 {/* Start Banner 
     ============================================= */}
@@ -167,23 +97,24 @@ const Homepage = () => {
                             <div className="col-lg-12">
                                 <div className="banner-style-one-items">
                                     <div className="info">
-                                        <h1>I👋 am Dalton </h1>
+                                        <h1>I👋 am Nitish </h1>
                                         <h2>
                                             <span className="header-caption" id="page-top">
                                                 {/* type headline start*/}
                                                 <span className="cd-headline clip is-full-width">
                                                     {/* ROTATING TEXT */}
                                                     <span className="cd-words-wrapper">
-                                                        <b className="is-visible">Web Developer</b>
-                                                        <b className="is-hidden">Professional Coder</b>
-                                                        <b className="is-hidden">UI/UX Designer</b>
+                                                        <b className="is-visible">Full Stack Developer !</b>
+                                                        <b className="is-hidden">Web Developer !</b>
+                                                        <b className="is-hidden">Professional Coder !</b>
+                                                        <b className="is-hidden">UI/UX Designer !</b>
                                                     </span>
                                                 </span>
                                                 {/* type headline end */}
                                             </span>
                                         </h2>
                                         <p>
-                                            Hi, my name is Dalton Grant and I began using WordPress when it first began. I’ve spent most of my waking hours for the last ten years designing, programming and operating WordPress sites.
+                                            Hi, my name is Nitish Kumar Ratre and I began using WordPress when it first began. I’ve spent most of my waking hours for the last ten years designing, programming and operating WordPress sites.
                                         </p>
                                         <div className="flex-social mt-40">
                                             <div className="button">
@@ -203,7 +134,7 @@ const Homepage = () => {
                                         </div>
                                     </div>
                                     <div className="thumb">
-                                        <img src="assets/img/illustration/1.png" alt="Image Not Found" />
+                                        <img src="assets/img/illustration/nkr.png" alt="Image Not Found" />
                                         <img src="assets/img/shape/1.png" alt="Image Not Found" />
                                         <img src="assets/img/shape/3.png" alt="Image Not Found" />
                                     </div>
@@ -281,268 +212,21 @@ const Homepage = () => {
                     </div>
                 </div>
                 {/* End About */}
+
                 {/* Start Services 
     ============================================= */}
-                <div id="services" className="services-style-one-area default-padding bottom-less">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-8 offset-lg-2">
-                                <div className="site-heading text-center">
-                                    <h4 className="sub-title">Services</h4>
-                                    <h2 className="title">My Quality Services</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="container">
-                        <div className="row">
-                            {/* Single Item */}
-                            <div className="col-xl-3 col-md-6 mb-30 wow fadeInUp">
-                                <div className="service-style-one-item">
-                                    <img src="assets/img/icon/1.png" alt="Image Not Found" />
-                                    <h4><a href="services-details.html">Digital Marketing</a></h4>
-                                    <p>
-                                        Continue indulged speaking the was horrible for domestic position. Seeing get rather.
-                                    </p>
-                                    <a href="services-details.html" className="btn-style-four">
-                                        <div className="icon"><img src="assets/img/icon/arrow.png" alt="Image Not Found" /></div> Read More
-                                    </a>
-                                </div>
-                            </div>
-                            {/* End Single Item */}
-                            {/* Single Item */}
-                            <div className="col-xl-3 col-md-6 mb-30 active wow fadeInUp" data-wow-delay="200ms">
-                                <div className="service-style-one-item active">
-                                    <img src="assets/img/icon/2.png" alt="Image Not Found" />
-                                    <h4><a href="services-details.html">App Development</a></h4>
-                                    <p>
-                                        Continue indulged speaking the was horrible for domestic position. Seeing get rather.
-                                    </p>
-                                    <a href="services-details.html" className="btn-style-four">
-                                        <div className="icon"><img src="assets/img/icon/arrow.png" alt="Image Not Found" /></div> Read More
-                                    </a>
-                                </div>
-                            </div>
-                            {/* End Single Item */}
-                            {/* Single Item */}
-                            <div className="col-xl-3 col-md-6 mb-30 wow fadeInUp" data-wow-delay="400ms">
-                                <div className="service-style-one-item">
-                                    <img src="assets/img/icon/3.png" alt="Image Not Found" />
-                                    <h4><a href="services-details.html">UI/UX Design</a></h4>
-                                    <p>
-                                        Continue indulged speaking the was horrible for domestic position. Seeing get rather.
-                                    </p>
-                                    <a href="services-details.html" className="btn-style-four">
-                                        <div className="icon"><img src="assets/img/icon/arrow.png" alt="Image Not Found" /></div> Read More
-                                    </a>
-                                </div>
-                            </div>
-                            {/* End Single Item */}
-                            {/* Single Item */}
-                            <div className="col-xl-3 col-md-6 mb-30 wow fadeInUp" data-wow-delay="600ms">
-                                <div className="service-style-one-item">
-                                    <img src="assets/img/icon/4.png" alt="Image Not Found" />
-                                    <h4><a href="services-details.html">Web Design</a></h4>
-                                    <p>
-                                        Continue indulged speaking the was horrible for domestic position. Seeing get rather.
-                                    </p>
-                                    <a href="services-details.html" className="btn-style-four">
-                                        <div className="icon"><img src="assets/img/icon/arrow.png" alt="Image Not Found" /></div> Read More
-                                    </a>
-                                </div>
-                            </div>
-                            {/* End Single Item */}
-                        </div>
-                    </div>
-                </div>
+
+                <Services />
+
                 {/* End Services */}
+
                 {/* Start Portfolio 
     ============================================= */}
-                <div id="portfolio" className="portfolio-style-one-area default-padding bg-gray">
-                    <div className="shape-top-left">
-                        <img src="assets/img/shape/9.png" alt="Image Not Found" />
-                    </div>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-8 offset-lg-2">
-                                <div className="site-heading text-center">
-                                    <h4 className="sub-title">Portfolio</h4>
-                                    <h2 className="title">My Recent Work</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-12 gallery-content">
-                                <div className="magnific-mix-gallery gallery-masonary">
-                                    <div id="gallery-masonary" className="gallery-items colums-3">
-                                        {/* Single Item */}
-                                        <div className="gallery-item">
-                                            <div className="gallery-style-one">
-                                                <img src="assets/img/projects/1.jpg" alt="Thumb" />
-                                                <div className="info">
-                                                    <div className="overlay">
-                                                        <div className="content">
-                                                            <ul className="pf-tags">
-                                                                <li>
-                                                                    <a href="#">Web</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">Coding</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div className="icon">
-                                                            <a href="project-details.html"><i className="fas fa-long-arrow-right" /></a>
-                                                        </div>
-                                                    </div>
-                                                    <h4><a href="project-details.html">Document manager application</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* End Single Item */}
-                                        {/* Single Item */}
-                                        <div className="gallery-item">
-                                            <div className="gallery-style-one">
-                                                <img src="assets/img/projects/2.jpg" alt="Thumb" />
-                                                <div className="info">
-                                                    <div className="overlay">
-                                                        <div className="content">
-                                                            <ul className="pf-tags">
-                                                                <li>
-                                                                    <a href="#">Software</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">Mobile</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div className="icon">
-                                                            <a href="project-details.html"><i className="fas fa-long-arrow-right" /></a>
-                                                        </div>
-                                                    </div>
-                                                    <h4><a href="project-details.html">Dynamic mobile app development</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* End Single Item */}
-                                        {/* Single Item */}
-                                        <div className="gallery-item">
-                                            <div className="gallery-style-one">
-                                                <img src="assets/img/projects/3.jpg" alt="Thumb" />
-                                                <div className="info">
-                                                    <div className="overlay">
-                                                        <div className="content">
-                                                            <ul className="pf-tags">
-                                                                <li>
-                                                                    <a href="#">Brochure</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">Design</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div className="icon">
-                                                            <a href="project-details.html"><i className="fas fa-long-arrow-right" /></a>
-                                                        </div>
-                                                    </div>
-                                                    <h4><a href="project-details.html">Printable professional brochure templates</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* End Single Item */}
-                                        {/* Single Item */}
-                                        <div className="gallery-item">
-                                            <div className="gallery-style-one">
-                                                <img src="assets/img/projects/6.jpg" alt="Thumb" />
-                                                <div className="info">
-                                                    <div className="overlay">
-                                                        <div className="content">
-                                                            <ul className="pf-tags">
-                                                                <li>
-                                                                    <a href="#">Brand</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">Mockup</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div className="icon">
-                                                            <a href="project-details.html"><i className="fas fa-long-arrow-right" /></a>
-                                                        </div>
-                                                    </div>
-                                                    <h4><a href="project-details.html">Create stunning product flexible mockups</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* End Single Item */}
-                                        {/* Single Item */}
-                                        <div className="gallery-item">
-                                            <div className="gallery-style-one">
-                                                <img src="assets/img/projects/5.jpg" alt="Thumb" />
-                                                <div className="info">
-                                                    <div className="overlay">
-                                                        <div className="content">
-                                                            <ul className="pf-tags">
-                                                                <li>
-                                                                    <a href="#">Design</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">Art</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div className="icon">
-                                                            <a href="project-details.html"><i className="fas fa-long-arrow-right" /></a>
-                                                        </div>
-                                                    </div>
-                                                    <h4><a href="project-details.html">Decor design vectors illustrations</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* End Single Item */}
-                                        {/* Single Item */}
-                                        <div className="gallery-item">
-                                            <div className="gallery-style-one">
-                                                <img src="assets/img/projects/4.jpg" alt="Thumb" />
-                                                <div className="info">
-                                                    <div className="overlay">
-                                                        <div className="content">
-                                                            <ul className="pf-tags">
-                                                                <li>
-                                                                    <a href="#">Music</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">Video</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div className="icon">
-                                                            <a href="project-details.html"><i className="fas fa-long-arrow-right" /></a>
-                                                        </div>
-                                                    </div>
-                                                    <h4><a href="project-details.html">Making smart software smartphones</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* End Single Item */}
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="col-lg-12 text-center">
-                                        <div className="load-more-info text-center mt-60 mt-xs-30">
-                                            <p>
-                                                Are you interested to show more portfolios? <a href="#">Load More</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                <Portfolio />
+
                 {/* End Portfolio */}
+
                 {/* Start Fun Fact 
     ============================================= */}
                 <div className="fun-factor-area default-padding overflow-hidden">
@@ -646,207 +330,13 @@ const Homepage = () => {
                     </div>
                 </div>
                 {/* End Fun Factor */}
+
                 {/* Start Timeline 
     ============================================= */}
-                <div id="resume" className="timeline-area default-padding bg-gray">
-                    <div className="container">
-                        <div className="time-line-style-one-box">
-                            <div className="row guttex-xl">
-                                <div className="col-lg-6">
-                                    <h2>My Expertise</h2>
-                                    <div className="time-style-one-items">
-                                        {/* Single Item */}
-                                        <div className="timeline-style-one-item wow fadeInUp">
-                                            <div className="timeline-header">
-                                                <div className="left">
-                                                    <h4>Lead Developer</h4>
-                                                    <p>
-                                                        Blockdots, London
-                                                    </p>
-                                                </div>
-                                                <div className="right">
-                                                    <span>2022 - Present</span>
-                                                </div>
-                                            </div>
-                                            <div className="timeline-body">
-                                                <p>
-                                                    The education should be very interactual. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante. sectors of the economy or areas of culture sed mauris hendrerit, laoreet smart software.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        {/* End Single Item */}
-                                        {/* Single Item */}
-                                        <div className="timeline-style-one-item wow fadeInUp">
-                                            <div className="timeline-header">
-                                                <div className="left">
-                                                    <h4>Full Stack Web Developer</h4>
-                                                    <p>
-                                                        Parsons, The New School
-                                                    </p>
-                                                </div>
-                                                <div className="right">
-                                                    <span>2021 - 2022</span>
-                                                </div>
-                                            </div>
-                                            <div className="timeline-body">
-                                                <p>
-                                                    The education should be very interactual. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante. sectors of the economy or areas of culture sed mauris hendrerit, laoreet smart software.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        {/* End Single Item */}
-                                        {/* Single Item */}
-                                        <div className="timeline-style-one-item wow fadeInUp">
-                                            <div className="timeline-header">
-                                                <div className="left">
-                                                    <h4>UI Designer</h4>
-                                                    <p>
-                                                        House of Life, Leeds
-                                                    </p>
-                                                </div>
-                                                <div className="right">
-                                                    <span>2018 - 2023</span>
-                                                </div>
-                                            </div>
-                                            <div className="timeline-body">
-                                                <p>
-                                                    The education should be very interactual. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante. sectors of the economy or areas of culture sed mauris hendrerit, laoreet smart software.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        {/* End Single Item */}
-                                    </div>
-                                </div>
-                                <div className="col-lg-6">
-                                    <h2>Education Background</h2>
-                                    <div className="time-style-one-items">
-                                        {/* Single Item */}
-                                        <div className="timeline-style-one-item wow fadeInUp">
-                                            <div className="timeline-header">
-                                                <div className="left">
-                                                    <h4>Programming Course</h4>
-                                                    <p>
-                                                        Harverd University
-                                                    </p>
-                                                </div>
-                                                <div className="right">
-                                                    <span>2006 - 2014</span>
-                                                </div>
-                                            </div>
-                                            <div className="timeline-body">
-                                                <p>
-                                                    The education should be very interactual. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante. sectors of the economy or areas of culture sed mauris hendrerit, laoreet smart software.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        {/* End Single Item */}
-                                        {/* Single Item */}
-                                        <div className="timeline-style-one-item wow fadeInUp">
-                                            <div className="timeline-header">
-                                                <div className="left">
-                                                    <h4>Graphic Design Course</h4>
-                                                    <p>
-                                                        Blockdots, London
-                                                    </p>
-                                                </div>
-                                                <div className="right">
-                                                    <span>2016 - 2020</span>
-                                                </div>
-                                            </div>
-                                            <div className="timeline-body">
-                                                <p>
-                                                    The education should be very interactual. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante. sectors of the economy or areas of culture sed mauris hendrerit, laoreet smart software.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        {/* End Single Item */}
-                                        {/* Single Item */}
-                                        <div className="timeline-style-one-item wow fadeInUp">
-                                            <div className="timeline-header">
-                                                <div className="left">
-                                                    <h4>Web design course</h4>
-                                                    <p>
-                                                        University of California
-                                                    </p>
-                                                </div>
-                                                <div className="right">
-                                                    <span>2012 - 2015</span>
-                                                </div>
-                                            </div>
-                                            <div className="timeline-body">
-                                                <p>
-                                                    The education should be very interactual. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante. sectors of the economy or areas of culture sed mauris hendrerit, laoreet smart software.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        {/* End Single Item */}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Resume />
+
                 {/* End Timeline */}
-                {/* Start Partner 
-    ============================================= */}
-                <div className="partner-style-one-area text-center default-padding bottom-less overflow-hidden">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-6 offset-lg-3">
-                                <div className="site-heading text-center">
-                                    <h4 className="sub-title">Partner</h4>
-                                    <h2 className="title">With The World Premier 80+ Brands</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="container-full">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="partner-style-one-items">
-                                    {/* Single Item */}
-                                    <div className="partner-style-one-item wow fadeInLeft">
-                                        <img src="assets/img/partner/1.png" alt="Image Not Found" />
-                                    </div>
-                                    {/* End Single Item */}
-                                    {/* Single Item */}
-                                    <div className="partner-style-one-item wow fadeInLeft">
-                                        <img src="assets/img/partner/2.png" alt="Image Not Found" />
-                                    </div>
-                                    {/* End Single Item */}
-                                    {/* Single Item */}
-                                    <div className="partner-style-one-item wow fadeInLeft">
-                                        <img src="assets/img/partner/3.png" alt="Image Not Found" />
-                                    </div>
-                                    {/* End Single Item */}
-                                    {/* Single Item */}
-                                    <div className="partner-style-one-item wow fadeInLeft">
-                                        <img src="assets/img/partner/4.png" alt="Image Not Found" />
-                                    </div>
-                                    {/* End Single Item */}
-                                </div>
-                                <div className="partner-style-one-items">
-                                    {/* Single Item */}
-                                    <div className="partner-style-one-item wow fadeInRight">
-                                        <img src="assets/img/partner/5.png" alt="Image Not Found" />
-                                    </div>
-                                    {/* End Single Item */}
-                                    {/* Single Item */}
-                                    <div className="partner-style-one-item wow fadeInRight">
-                                        <img src="assets/img/partner/6.png" alt="Image Not Found" />
-                                    </div>
-                                    {/* End Single Item */}
-                                    {/* Single Item */}
-                                    <div className="partner-style-one-item wow fadeInRight">
-                                        <img src="assets/img/partner/7.png" alt="Image Not Found" />
-                                    </div>
-                                    {/* End Single Item */}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* End Partner */}
+
                 {/* Start Testimonial 
     ============================================= */}
                 <div className="testimonial-style-one-area default-padding bg-gray">
@@ -999,94 +489,7 @@ const Homepage = () => {
                     </div>
                 </div>
                 {/* End Testimonial */}
-                {/* Start Pricing 
-    ============================================= */}
-                <div id="pricing" className="pricing-style-one-area default-padding bg-light">
-                    <div className="shape-right-top">
-                        <img src="assets/img/shape/15.png" alt="Image Not Found" />
-                    </div>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-6 offset-lg-3">
-                                <div className="site-heading text-center">
-                                    <h4 className="sub-title">Pricing</h4>
-                                    <h2 className="title">The best pricing plans to get your best</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="container">
-                        <div className="row">
-                            {/* Single Item */}
-                            <div className="col-lg-6 pricing-one-single">
-                                <div className="pricing-style-one wow fadeInUp">
-                                    <div className="pricing-top">
-                                        <div className="right">
-                                            <i className="fab fa-wordpress" />
-                                        </div>
-                                        <div className="left">
-                                            <h4>WordPress Development</h4>
-                                            <p>
-                                                Simple and flexible per - user pricing
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="content">
-                                        <div className="price">
-                                            <h2><sup>$</sup>48</h2>
-                                        </div>
-                                        <ul>
-                                            <li>1 Page with Elementor</li>
-                                            <li>Design Customization</li>
-                                            <li>Responsive Design</li>
-                                            <li>1 Page with Elementor</li>
-                                            <li>Design Customization</li>
-                                            <li>Responsive Design</li>
-                                        </ul>
-                                        <div className="button mt-30">
-                                            <a className="btn-style-regular" href="#contact"><span>Order Now</span> <i className="fas fa-arrow-right" /></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* End Single Item */}
-                            {/* Single Item */}
-                            <div className="col-lg-6 pricing-one-single">
-                                <div className="pricing-style-one wow fadeInUp" data-wow-delay="200ms">
-                                    <div className="pricing-top">
-                                        <div className="right">
-                                            <i className="fab fa-bootstrap" />
-                                        </div>
-                                        <div className="left">
-                                            <h4>Static frontend design</h4>
-                                            <p>
-                                                Simple and flexible per - user pricing
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="content">
-                                        <div className="price">
-                                            <h2><sup>$</sup>28</h2>
-                                        </div>
-                                        <ul>
-                                            <li>2 Page with Bootstrap5</li>
-                                            <li>Design implement</li>
-                                            <li>Responsive Design</li>
-                                            <li>2 Page with Bootstrap5</li>
-                                            <li>Design implement</li>
-                                            <li>Responsive Design</li>
-                                        </ul>
-                                        <div className="button mt-30">
-                                            <a className="btn-style-regular btn-border" href="#contact"><span>Order Now</span> <i className="fas fa-arrow-right" /></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* End Single Item */}
-                        </div>
-                    </div>
-                </div>
-                {/* End Pricing */}
+
                 {/* Start Faq 
     ============================================= */}
                 <div className="faq-style-one-area default-padding">
@@ -1159,64 +562,11 @@ const Homepage = () => {
                 {/* End Faq */}
                 {/* Start Contact 
     ============================================= */}
-                <div id="contact" className="contact-style-one-area default-padding bg-gray">
-                    <div className="container">
-                        <div className="contact-style-one-items">
-                            <h1 className="fixed-text">Contact Me</h1>
-                            <div className="row">
-                                <div className="col-lg-6">
-                                    <form action="https://validthemes.net/site-template/antux/assets/mail/contact.php" method="POST" className="contact-form contact-form">
-                                        <div className="row">
-                                            <div className="col-lg-12">
-                                                <div className="form-group">
-                                                    <input className="form-control" id="name" name="name" placeholder="Name" type="text" />
-                                                    <span className="alert-error" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="col-lg-6">
-                                                <div className="form-group">
-                                                    <input className="form-control" id="email" name="email" placeholder="Email*" type="email" />
-                                                    <span className="alert-error" />
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6">
-                                                <div className="form-group">
-                                                    <input className="form-control" id="phone" name="phone" placeholder="Phone" type="text" />
-                                                    <span className="alert-error" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="col-lg-12">
-                                                <div className="form-group comments">
-                                                    <textarea className="form-control" id="comments" name="comments" placeholder="Tell Us About Project *" defaultValue={""} />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="col-lg-12">
-                                                <button className="btn-style-regular" type="submit" name="submit" id="submit">
-                                                    <span>Get in Touch</span> <i className="fas fa-arrow-right" />
-                                                </button>
-                                            </div>
-                                        </div>
-                                        {/* Alert Message */}
-                                        <div className="col-lg-12 alert-notification">
-                                            <div id="message" className="alert-msg" />
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div className="contact-illustration">
-                                <img src="assets/img/illustration/5.png" alt="Image Not Found" />
-                                <img src="assets/img/shape/13.png" alt="Image Not Found" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    
+                <Contact/>
+
                 {/* End Contact */}
+
                 {/* Start Blog 
     ============================================= */}
                 <div id="blog" className="blog-area home-blog default-padding bottom-less">
@@ -1313,7 +663,9 @@ const Homepage = () => {
                             <div className="col-xl-8 offset-xl-2">
                                 <div className="promo-box-items text-center">
                                     <h2>Hello👋i'm available for freelance work</h2>
-                                    <h4>For quick response: <a href="skype:example123?chat"><i className="fab fa-skype" /> Chat now</a></h4>
+                                    <h4>For quick response: <a href="mailto:your-email@example.com" class="btn btn">
+                                        <i class="fas fa-envelope"></i> Email Me
+                                    </a></h4>
                                     <div className="button mt-40">
                                         <a className="btn-style-regular" href="#contact"><span>Hire Me Now </span> <i className="fas fa-arrow-right" /></a>
                                     </div>
@@ -1332,13 +684,13 @@ const Homepage = () => {
                                 <div className="footer-items text-center">
                                     <a href="#" className="footer-logot"><img src="assets/img/logo.png" alt="Image Not Found" /></a>
                                     <ul className="foter-menu">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="service.html">Services</a></li>
-                                        <li><a href="projects.html">Portfolio</a></li>
-                                        <li><a href="blog-with-sidebar.html">Blog</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="#home">Home</a></li>
+                                        <li><a href="#services">Services</a></li>
+                                        <li><a href="#portfolio">Portfolio</a></li>
+                                        <li><a href="#blog">Blog</a></li>
+                                        <li><a href="#contact">Contact</a></li>
                                     </ul>
-                                    <p>Copyright © 2024 Antux. All Rights Reserved</p>
+                                    <p>Copyright © 2024 nitishkumarratre. All Rights Reserved</p>
                                 </div>
                             </div>
                         </div>
