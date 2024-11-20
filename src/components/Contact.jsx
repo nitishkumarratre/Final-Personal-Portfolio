@@ -9,7 +9,7 @@ const Contact = () => {
                         <h1 className="fixed-text">Contact Me</h1>
                         <div className="row">
                             <div className="col-lg-6">
-                                <form action="https://validthemes.net/site-template/antux/assets/mail/contact.php" method="POST" className="contact-form contact-form">
+                                <form action="" method="POST" className="contact-form contact-form">
                                     <div className="row">
                                         <div className="col-lg-12">
                                             <div className="form-group">

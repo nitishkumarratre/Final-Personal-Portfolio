@@ -1,6 +1,15 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 
 const Portfolio = () => {
+
+    const backToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
     return (
         <>
             <div id="portfolio" className="portfolio-style-one-area default-padding bg-gray">
@@ -39,10 +48,10 @@ const Portfolio = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="icon">
-                                                        <a href="project-details.html"><i className="fas fa-long-arrow-right" /></a>
+                                                        <NavLink onClick={backToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
                                                     </div>
                                                 </div>
-                                                <h4><a href="project-details.html">Document manager application</a></h4>
+                                                <h4><NavLink onClick={backToTop} to="/project-details">Document manager application</NavLink></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -64,10 +73,10 @@ const Portfolio = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="icon">
-                                                        <a href="project-details.html"><i className="fas fa-long-arrow-right" /></a>
+                                                        <NavLink onClick={backToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
                                                     </div>
                                                 </div>
-                                                <h4><a href="project-details.html">Dynamic mobile app development</a></h4>
+                                                <h4><NavLink onClick={backToTop} to="/project-details">Dynamic mobile app development</NavLink></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -89,10 +98,10 @@ const Portfolio = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="icon">
-                                                        <a href="project-details.html"><i className="fas fa-long-arrow-right" /></a>
+                                                        <NavLink onClick={backToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
                                                     </div>
                                                 </div>
-                                                <h4><a href="project-details.html">Printable professional brochure templates</a></h4>
+                                                <h4><NavLink onClick={backToTop} to="/project-details">Printable professional brochure templates</NavLink></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -114,10 +123,10 @@ const Portfolio = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="icon">
-                                                        <a href="project-details.html"><i className="fas fa-long-arrow-right" /></a>
+                                                        <NavLink onClick={backToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
                                                     </div>
                                                 </div>
-                                                <h4><a href="project-details.html">Create stunning product flexible mockups</a></h4>
+                                                <h4><NavLink onClick={backToTop} to="/project-details">Create stunning product flexible mockups</NavLink></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -139,10 +148,10 @@ const Portfolio = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="icon">
-                                                        <a href="project-details.html"><i className="fas fa-long-arrow-right" /></a>
+                                                        <NavLink onClick={backToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
                                                     </div>
                                                 </div>
-                                                <h4><a href="project-details.html">Decor design vectors illustrations</a></h4>
+                                                <h4><NavLink onClick={backToTop} to="/project-details">Decor design vectors illustrations</NavLink></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -164,10 +173,10 @@ const Portfolio = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="icon">
-                                                        <a href="project-details.html"><i className="fas fa-long-arrow-right" /></a>
+                                                        <NavLink onClick={backToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
                                                     </div>
                                                 </div>
-                                                <h4><a href="project-details.html">Making smart software smartphones</a></h4>
+                                                <h4><NavLink onClick={backToTop} to="/project-details">Making smart software smartphones</NavLink></h4>
                                             </div>
                                         </div>
                                     </div>

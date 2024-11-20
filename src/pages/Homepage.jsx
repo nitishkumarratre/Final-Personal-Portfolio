@@ -1,16 +1,19 @@
 import React, { useEffect } from 'react'
 import { gsap } from 'gsap';
-import { NavLink } from 'react-router-dom';
 import Header from '../components/Header';
 import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
 import Resume from '../components/Resume';
 import Contact from '../components/Contact';
+import { NavLink } from 'react-router-dom';
+import Footer from '../components/Footer';
+import PromoBox from '../components/PromoBox';
 
 
 
 const Homepage = () => {
 
+    // for loading 
     useEffect(() => {
         const svg = document.getElementById("preloaderSvg");
         const svgText = document.querySelector(".hero-section .intro_text svg text");
@@ -51,6 +54,7 @@ const Homepage = () => {
             }
         }
     }, []);
+    // for loading end 
 
 
     const backToTop = () => {
@@ -63,8 +67,7 @@ const Homepage = () => {
     return (
         <>
             <div>
-                {/* preloader 
-    ============================================= */}
+                {/* preloader  */}
                 <div className="preloader">
                     <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
                         <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z" />
@@ -84,13 +87,11 @@ const Homepage = () => {
 
 
                 {/* Preloader Area End */}
-                {/* Header 
-    ============================================= */}
+                {/* Header  */}
                 <Header />
 
                 {/* End Header */}
-                {/* Start Banner 
-    ============================================= */}
+                {/* Start Banner  */}
                 <div className="banner-style-one-area bg-gray" style={{ backgroundImage: 'url(assets/img/shape/4.png)' }}>
                     <div className="container">
                         <div className="row align-items-center">
@@ -122,14 +123,21 @@ const Homepage = () => {
                                             </div>
                                             <ul className="social-info">
                                                 <li>
-                                                    <a href="#"><i className="fab fa-facebook" /></a>
+                                                    <a href="https://www.facebook.com" target='_blank'><i className="fab fa-facebook" /></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-linkedin-in" /></a>
+                                                    <a href="https://www.linkedin.com" target='_blank'><i className="fab fa-linkedin-in" /></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#"><i className="fab fa-dribbble" /></a>
+                                                    <a href="https://www.github.com" target='_blank'><i className="fab fa-github" /></a>
                                                 </li>
+                                                 <li>
+                                                    <a href="https://www.whatsapp.com" target='_blank'><i className="fab fa-whatsapp" /></a>
+                                                </li>
+                                                 <li>
+                                                    <a href="https://www.twitter.com" target='_blank'><i className="fab fa-twitter" /></a>
+                                                </li>
+                                                
                                             </ul>
                                         </div>
                                     </div>
@@ -144,8 +152,7 @@ const Homepage = () => {
                     </div>
                 </div>
                 {/* End Banner */}
-                {/* Start About 
-    ============================================= */}
+                {/* Start About  */}
                 <div id="about" className="about-style-one-area bg-gray default-padding">
                     <div className="shape-style-one">
                         <img src="assets/img/shape/3.png" alt="Image Not Found" />
@@ -213,22 +220,19 @@ const Homepage = () => {
                 </div>
                 {/* End About */}
 
-                {/* Start Services 
-    ============================================= */}
+                {/* Start Services  */}
 
                 <Services />
 
                 {/* End Services */}
 
-                {/* Start Portfolio 
-    ============================================= */}
+                {/* Start Portfolio  */}
 
                 <Portfolio />
 
                 {/* End Portfolio */}
 
-                {/* Start Fun Fact 
-    ============================================= */}
+                {/* Start Fun Fact  */}
                 <div className="fun-factor-area default-padding overflow-hidden">
                     <div className="container">
                         <div className="row">
@@ -331,14 +335,12 @@ const Homepage = () => {
                 </div>
                 {/* End Fun Factor */}
 
-                {/* Start Timeline 
-    ============================================= */}
+                {/* Start Timeline */}
                 <Resume />
 
                 {/* End Timeline */}
 
-                {/* Start Testimonial 
-    ============================================= */}
+                {/* Start Testimonial  */}
                 <div className="testimonial-style-one-area default-padding bg-gray">
                     <div className="shape-left-top">
                         <img src="assets/img/shape/10.png" alt="Image Not Found" />
@@ -490,8 +492,7 @@ const Homepage = () => {
                 </div>
                 {/* End Testimonial */}
 
-                {/* Start Faq 
-    ============================================= */}
+                {/* Start Faq */}
                 <div className="faq-style-one-area default-padding">
                     <div className="container">
                         <div className="row">
@@ -560,15 +561,13 @@ const Homepage = () => {
                     </div>
                 </div>
                 {/* End Faq */}
-                {/* Start Contact 
-    ============================================= */}
-    
-                <Contact/>
+                {/* Start Contact  */}
+
+                <Contact />
 
                 {/* End Contact */}
 
-                {/* Start Blog 
-    ============================================= */}
+                {/* Start Blog  */}
                 <div id="blog" className="blog-area home-blog default-padding bottom-less">
                     <div className="container">
                         <div className="row">
@@ -655,47 +654,18 @@ const Homepage = () => {
                     </div>
                 </div>
                 {/* End Blog */}
-                {/* Start Promo box
-    ============================================= */}
-                <div className="promot-box-area default-padding">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-xl-8 offset-xl-2">
-                                <div className="promo-box-items text-center">
-                                    <h2>Hello👋i'm available for freelance work</h2>
-                                    <h4>For quick response: <a href="mailto:your-email@example.com" class="btn btn">
-                                        <i class="fas fa-envelope"></i> Email Me
-                                    </a></h4>
-                                    <div className="button mt-40">
-                                        <a className="btn-style-regular" href="#contact"><span>Hire Me Now </span> <i className="fas fa-arrow-right" /></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                {/* Start Promo box */}
+
+                <PromoBox />
+
                 {/* End Promo box */}
-                {/* Start Footer 
-    ============================================= */}
-                <footer className="default-padding bg-cover" style={{ backgroundImage: 'url(assets/img/shape/1.jpg)' }}>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-8 offset-lg-2">
-                                <div className="footer-items text-center">
-                                    <a href="#" className="footer-logot"><img src="assets/img/logo.png" alt="Image Not Found" /></a>
-                                    <ul className="foter-menu">
-                                        <li><a href="#home">Home</a></li>
-                                        <li><a href="#services">Services</a></li>
-                                        <li><a href="#portfolio">Portfolio</a></li>
-                                        <li><a href="#blog">Blog</a></li>
-                                        <li><a href="#contact">Contact</a></li>
-                                    </ul>
-                                    <p>Copyright © 2024 nitishkumarratre. All Rights Reserved</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+
+                {/* Start Footer  */}
+
+                <Footer />
+
+                {/* End Footer  */}
             </div>
 
         </>

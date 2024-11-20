@@ -1,6 +1,31 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import { NavLink } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
 
 const Services = () => {
+
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const element = document.getElementById(location.hash.replace('#', ''));
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    }, [location]);
+    
+
+
+
+    const backToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
+
     return (
         <>
             <div id="services" className="services-style-one-area default-padding bottom-less">
@@ -20,13 +45,13 @@ const Services = () => {
                         <div className="col-xl-3 col-md-6 mb-30 wow fadeInUp">
                             <div className="service-style-one-item">
                                 <img src="assets/img/icon/1.png" alt="Image Not Found" />
-                                <h4><a href="services-details.html">Digital Marketing</a></h4>
+                                <h4><NavLink onClick={backToTop} to="/services-details">Digital Marketing</NavLink></h4>
                                 <p>
                                     Continue indulged speaking the was horrible for domestic position. Seeing get rather.
                                 </p>
-                                <a href="services-details.html" className="btn-style-four">
+                                <NavLink onClick={backToTop} to="/services-details" className="btn-style-four">
                                     <div className="icon"><img src="assets/img/icon/arrow.png" alt="Image Not Found" /></div> Read More
-                                </a>
+                                </NavLink>
                             </div>
                         </div>
                         {/* End Single Item */}
@@ -34,13 +59,13 @@ const Services = () => {
                         <div className="col-xl-3 col-md-6 mb-30 active wow fadeInUp" data-wow-delay="200ms">
                             <div className="service-style-one-item active">
                                 <img src="assets/img/icon/2.png" alt="Image Not Found" />
-                                <h4><a href="services-details.html">App Development</a></h4>
+                                <h4><NavLink onClick={backToTop} to="/services-details">App Development</NavLink></h4>
                                 <p>
                                     Continue indulged speaking the was horrible for domestic position. Seeing get rather.
                                 </p>
-                                <a href="services-details.html" className="btn-style-four">
+                                <NavLink onClick={backToTop} to="/services-details" className="btn-style-four">
                                     <div className="icon"><img src="assets/img/icon/arrow.png" alt="Image Not Found" /></div> Read More
-                                </a>
+                                </NavLink>
                             </div>
                         </div>
                         {/* End Single Item */}
@@ -48,13 +73,13 @@ const Services = () => {
                         <div className="col-xl-3 col-md-6 mb-30 wow fadeInUp" data-wow-delay="400ms">
                             <div className="service-style-one-item">
                                 <img src="assets/img/icon/3.png" alt="Image Not Found" />
-                                <h4><a href="services-details.html">UI/UX Design</a></h4>
+                                <h4><NavLink onClick={backToTop} to="/services-details">UI/UX Design</NavLink></h4>
                                 <p>
                                     Continue indulged speaking the was horrible for domestic position. Seeing get rather.
                                 </p>
-                                <a href="services-details.html" className="btn-style-four">
+                                <NavLink onClick={backToTop} to="/services-details" className="btn-style-four">
                                     <div className="icon"><img src="assets/img/icon/arrow.png" alt="Image Not Found" /></div> Read More
-                                </a>
+                                </NavLink>
                             </div>
                         </div>
                         {/* End Single Item */}
@@ -62,13 +87,13 @@ const Services = () => {
                         <div className="col-xl-3 col-md-6 mb-30 wow fadeInUp" data-wow-delay="600ms">
                             <div className="service-style-one-item">
                                 <img src="assets/img/icon/4.png" alt="Image Not Found" />
-                                <h4><a href="services-details.html">Web Design</a></h4>
+                                <h4><NavLink onClick={backToTop} to="/services-details">Web Design</NavLink></h4>
                                 <p>
                                     Continue indulged speaking the was horrible for domestic position. Seeing get rather.
                                 </p>
-                                <a href="services-details.html" className="btn-style-four">
+                                <NavLink onClick={backToTop} to="/services-details" className="btn-style-four">
                                     <div className="icon"><img src="assets/img/icon/arrow.png" alt="Image Not Found" /></div> Read More
-                                </a>
+                                </NavLink>
                             </div>
                         </div>
                         {/* End Single Item */}
