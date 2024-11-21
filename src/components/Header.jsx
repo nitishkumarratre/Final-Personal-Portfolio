@@ -3,12 +3,21 @@ import { NavLink } from 'react-router-dom'
 
 const Header = () => {
 
-    const backToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+    // backtotop start
+
+    // Smooth scrolling with gradual steps
+    const smoothScrollToTop = () => {
+        const scrollStep = -window.scrollY / 50; // Controls speed (smaller number = slower)
+        const scrollInterval = setInterval(() => {
+            if (window.scrollY !== 0) {
+                window.scrollBy(0, scrollStep);
+            } else {
+                clearInterval(scrollInterval);
+            }
+        }, 15); // Interval duration in milliseconds
     };
+
+    // backtotop end
 
     return (
         <>
@@ -32,7 +41,7 @@ const Header = () => {
                             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                                 <i className="fa fa-bars" />
                             </button>
-                            <NavLink onClick={backToTop} className="navbar-brand" to="/">
+                            <NavLink onClick={smoothScrollToTop} className="navbar-brand" to="/">
                                 <img src="assets/img/logo.png" className="logo" alt="Logo" />
                             </NavLink>
 
@@ -68,7 +77,8 @@ const Header = () => {
                                     <a className="smooth-menu" href="#contact">contact</a>
                                 </li>
                             </ul>
-                        </div>{/* /.navbar-collapse */}
+                        </div>
+                        {/* /.navbar-collapse */}
                         <div className="nav-right">
                             <div className="attr-right">
                                 {/* Start Atribute Navigation */}

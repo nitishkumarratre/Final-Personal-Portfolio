@@ -1,10 +1,28 @@
 import React from 'react'
 
 const Resume = () => {
+
+
+
     return (
         <>
             <div id="resume" className="timeline-area default-padding bg-gray">
                 <div className="container">
+                    <div className="row">
+
+                        <div className="site-heading text-center">
+                            <h4 className="sub-title">RESUME</h4>
+                            <h2 className="title">See my expertise</h2>
+
+                            <h4 className="sub-title">
+                                <a className="smooth-menu" href="NITISH_KUMAR.pdf" target='_blank'>
+                                    DOWNLOAD <i className="fas fa-download" />
+                                </a>
+                            </h4>
+
+                        </div>
+
+                    </div>
                     <div className="time-line-style-one-box">
                         <div className="row guttex-xl">
                             <div className="col-lg-6">

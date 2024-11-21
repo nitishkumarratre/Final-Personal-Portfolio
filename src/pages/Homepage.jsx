@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { gsap } from 'gsap';
 import Header from '../components/Header';
 import Services from '../components/Services';
@@ -8,6 +8,7 @@ import Contact from '../components/Contact';
 import { NavLink } from 'react-router-dom';
 import Footer from '../components/Footer';
 import PromoBox from '../components/PromoBox';
+import BottomArrow from '../components/BottomArrow';
 
 
 
@@ -57,12 +58,6 @@ const Homepage = () => {
     // for loading end 
 
 
-    const backToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    };
 
     return (
         <>
@@ -131,13 +126,13 @@ const Homepage = () => {
                                                 <li>
                                                     <a href="https://www.github.com" target='_blank'><i className="fab fa-github" /></a>
                                                 </li>
-                                                 <li>
+                                                <li>
                                                     <a href="https://www.whatsapp.com" target='_blank'><i className="fab fa-whatsapp" /></a>
                                                 </li>
-                                                 <li>
+                                                <li>
                                                     <a href="https://www.twitter.com" target='_blank'><i className="fab fa-twitter" /></a>
                                                 </li>
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
@@ -666,6 +661,13 @@ const Homepage = () => {
                 <Footer />
 
                 {/* End Footer  */}
+
+                {/* arrow for back to top  */}
+
+                <BottomArrow />
+
+                {/* arrow for back to top end  */}
+                
             </div>
 
         </>

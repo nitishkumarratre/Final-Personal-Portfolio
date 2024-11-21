@@ -124,6 +124,14 @@ const Contact = () => {
     return (
         <div id="contact" className="contact-style-one-area default-padding bg-gray">
             <div className="container">
+                <div className="row">
+                    <div className="col-lg-8 offset-lg-2">
+                        <div className="site-heading text-center">
+                            <h4 className="sub-title">CONTACT</h4>
+                            <h2 className="title">Feel free to reach out!</h2>
+                        </div>
+                    </div>
+                </div>
                 <div className="contact-style-one-items">
                     <h1 className="fixed-text">Contact Me</h1>
                     <div className="row">
@@ -136,7 +144,7 @@ const Contact = () => {
                                                 className="form-control"
                                                 id="name"
                                                 name="name"
-                                                placeholder="Name"
+                                                placeholder="Name*"
                                                 type="text"
                                                 required
                                             />
@@ -162,7 +170,7 @@ const Contact = () => {
                                                 className="form-control"
                                                 id="phone"
                                                 name="phone"
-                                                placeholder="Phone"
+                                                placeholder="Phone*"
                                                 type="text"
                                                 onChange={handlePhoneChange} // Add this handler for phone change
                                             />

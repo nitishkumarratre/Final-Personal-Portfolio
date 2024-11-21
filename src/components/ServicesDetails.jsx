@@ -1,18 +1,27 @@
 import React, { useEffect } from 'react'
-import Header from './Header';
 import Footer from './Footer';
 import PromoBox from './PromoBox';
 import { NavLink } from 'react-router-dom';
+import BottomArrow from './BottomArrow';
 
 const ServicesDetails = () => {
 
 
-    const backToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+    // backtotop start
+
+    // Smooth scrolling with gradual steps
+    const smoothScrollToTop = () => {
+        const scrollStep = -window.scrollY / 50; // Controls speed (smaller number = slower)
+        const scrollInterval = setInterval(() => {
+            if (window.scrollY !== 0) {
+                window.scrollBy(0, scrollStep);
+            } else {
+                clearInterval(scrollInterval);
+            }
+        }, 15); // Interval duration in milliseconds
     };
+
+    // backtotop end
 
 
     return (
@@ -41,7 +50,7 @@ const ServicesDetails = () => {
                                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                                     <i className="fa fa-bars" />
                                 </button>
-                                <NavLink onClick={backToTop} className="navbar-brand" to="/">
+                                <NavLink onClick={smoothScrollToTop} className="navbar-brand" to="/services-details">
                                     <img src="assets/img/logo.png" className="logo" alt="Logo" />
                                 </NavLink>
 
@@ -406,11 +415,19 @@ const ServicesDetails = () => {
                 <PromoBox />
 
                 {/* End Promo box */}
+
                 {/* Start Footer  */}
 
                 <Footer />
 
                 {/* End Footer */}
+
+                {/* arrow for back to top  */}
+
+                <BottomArrow />
+
+                {/* arrow for back to top end  */}
+
             </div>
 
         </>
