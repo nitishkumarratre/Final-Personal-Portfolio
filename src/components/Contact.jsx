@@ -16,6 +16,7 @@ const Contact = () => {
         let isValid = true;
         let emptyField = '';
 
+        // Iterate over form elements to check for required fields
         for (let i = 0; i < formElements.length; i++) {
             if (formElements[i].hasAttribute('required') && !formElements[i].value.trim()) {
                 isValid = false;
@@ -24,8 +25,8 @@ const Contact = () => {
             }
         }
 
+        // If a required field is empty, show an error toast
         if (!isValid) {
-            // Display a toast alert for the specific empty field
             toast.error(`The ${emptyField} field is required. Please fill it out.`, {
                 position: "top-center",
                 autoClose: 3000,
@@ -33,6 +34,34 @@ const Contact = () => {
                 closeButton: true,
             });
             return; // Stop if validation fails
+        }
+
+        // Additional validation for email and phone
+        const email = form.current.elements.email.value;
+        const phone = form.current.elements.phone.value;
+
+        // Check if email is in a valid format
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email)) {
+            toast.error("Please enter a valid email address.", {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: true,
+                closeButton: true,
+            });
+            return;
+        }
+
+        // Check if phone is valid (e.g., only digits and a minimum length)
+        const phonePattern = /^[0-9]{10}$/; // Adjust to match your phone format
+        if (phone && !phonePattern.test(phone)) {
+            toast.error("Please enter a valid 10-digit phone number.", {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: true,
+                closeButton: true,
+            });
+            return;
         }
 
         setLoading(true); // Show loading spinner
@@ -68,7 +97,6 @@ const Contact = () => {
             );
     };
 
-
     const renderMessage = () => {
         if (messageStatus === 'SUCCESS') {
             return <div className="alert-msg success">Your message has been sent successfully!</div>;
@@ -77,6 +105,20 @@ const Contact = () => {
             return <div className="alert-msg error">There was an error sending your message. Please try again.</div>;
         }
         return null;
+    };
+
+    // Handle the phone input to allow only numeric digits and limit to 10 digits
+    const handlePhoneChange = (e) => {
+        const phoneValue = e.target.value;
+
+        // Allow only digits and limit the input to 10 characters
+        if (/[^0-9]/.test(phoneValue)) {
+            e.target.value = phoneValue.replace(/[^0-9]/g, ''); // Remove non-numeric characters
+        }
+
+        if (phoneValue.length > 10) {
+            e.target.value = phoneValue.slice(0, 10); // Restrict input to 10 digits
+        }
     };
 
     return (
@@ -122,6 +164,7 @@ const Contact = () => {
                                                 name="phone"
                                                 placeholder="Phone"
                                                 type="text"
+                                                onChange={handlePhoneChange} // Add this handler for phone change
                                             />
                                         </div>
                                     </div>
