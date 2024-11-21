@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify'; // Correct import
+import 'react-toastify/dist/ReactToastify.css'; // Import CSS for styling the alerts
 
 const Contact = () => {
     const form = useRef();
@@ -8,7 +10,30 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        console.log("Form submitted"); // Check if this is logged
+
+        // Validate required fields
+        const formElements = form.current.elements;
+        let isValid = true;
+        let emptyField = '';
+
+        for (let i = 0; i < formElements.length; i++) {
+            if (formElements[i].hasAttribute('required') && !formElements[i].value.trim()) {
+                isValid = false;
+                emptyField = formElements[i].name; // Capture the name of the empty field
+                break;
+            }
+        }
+
+        if (!isValid) {
+            // Display a toast alert for the specific empty field
+            toast.error(`The ${emptyField} field is required. Please fill it out.`, {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: true,
+                closeButton: true,
+            });
+            return; // Stop if validation fails
+        }
 
         setLoading(true); // Show loading spinner
 
@@ -18,13 +43,27 @@ const Contact = () => {
             })
             .then(
                 () => {
-                    setMessageStatus('SUCCESS'); // Set success message
-                    setLoading(false); // Hide loading spinner
+                    setMessageStatus('SUCCESS');
+                    setLoading(false);
+                    form.current.reset();
+                    toast.success("Your message has been sent successfully!", {
+                        position: "top-center",
+                        autoClose: 3000,
+                        hideProgressBar: true,
+                        closeButton: true,
+                    });
                 },
                 (error) => {
-                    setMessageStatus('FAILED'); // Set failure message
-                    setLoading(false); // Hide loading spinner
+                    setMessageStatus('FAILED');
+                    setLoading(false);
                     console.error('Error:', error.text);
+                    form.current.reset();
+                    toast.error("There was an error sending your message. Please try again.", {
+                        position: "top-center",
+                        autoClose: 3000,
+                        hideProgressBar: true,
+                        closeButton: true,
+                    });
                 }
             );
     };
@@ -47,7 +86,7 @@ const Contact = () => {
                     <h1 className="fixed-text">Contact Me</h1>
                     <div className="row">
                         <div className="col-lg-6">
-                            <form ref={form} onSubmit={sendEmail} className="contact-form contact-form">
+                            <form ref={form} className="contact-form contact-form">
                                 <div className="row">
                                     <div className="col-lg-12">
                                         <div className="form-group">
@@ -104,13 +143,16 @@ const Contact = () => {
                                 <div className="row">
                                     <div className="col-lg-12">
                                         <button
+                                            type="submit" // Changed to submit
                                             className="btn-style-regular"
                                             onClick={sendEmail} // Handle click directly
                                             name="submit"
                                             id="submit"
                                         >
                                             <span>{loading ? 'Sending...' : 'Get in Touch'}</span>
-                                            {loading && <i className="fas fa-spinner fa-spin" />}
+
+                                            {/* Show spinner when loading, hide arrow */}
+                                            {loading ? <i className="fas fa-spinner fa-spin" /> : <i className="fas fa-arrow-right"></i>}
                                         </button>
 
                                     </div>
@@ -126,6 +168,9 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
+
+            {/* ToastContainer for showing the toast notifications */}
+            <ToastContainer />
         </div>
     );
 };
