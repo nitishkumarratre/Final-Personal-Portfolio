@@ -1,6 +1,28 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_y2qhacm', 'template_lncyzma', form.current, {
+                publicKey: '0OClNmWCMF33r5SNa',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                    console.log('Not working...')
+                },
+            );
+    };
+
     return (
         <>
             <div id="contact" className="contact-style-one-area default-padding bg-gray">
@@ -9,7 +31,7 @@ const Contact = () => {
                         <h1 className="fixed-text">Contact Me</h1>
                         <div className="row">
                             <div className="col-lg-6">
-                                <form action="" method="POST" className="contact-form contact-form">
+                                <form ref={form} onSubmit={sendEmail}  className="contact-form contact-form">
                                     <div className="row">
                                         <div className="col-lg-12">
                                             <div className="form-group">
@@ -35,7 +57,7 @@ const Contact = () => {
                                     <div className="row">
                                         <div className="col-lg-12">
                                             <div className="form-group comments">
-                                                <textarea className="form-control" id="comments" name="comments" placeholder="Tell Us About Project *" defaultValue={""} />
+                                                <textarea className="form-control" id="comments" name="message" placeholder="Tell Us About Project *" defaultValue={""} />
                                             </div>
                                         </div>
                                     </div>

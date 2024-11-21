@@ -48,7 +48,7 @@ const Portfolio = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="icon">
-                                                        <NavLink onClick={backToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
+                                                        <NavLink  onClick={backToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
                                                     </div>
                                                 </div>
                                                 <h4><NavLink onClick={backToTop} to="/project-details">Document manager application</NavLink></h4>
