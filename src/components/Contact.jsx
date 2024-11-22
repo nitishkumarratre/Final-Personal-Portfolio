@@ -128,7 +128,7 @@ const Contact = () => {
                     <div className="col-lg-8 offset-lg-2">
                         <div className="site-heading text-center">
                             <h4 className="sub-title">CONTACT</h4>
-                            <h2 className="title">Feel free to reach out!</h2>
+                            {/* <h3 className="title">Feel free to reach out!</h3> */}
                         </div>
                     </div>
                 </div>

@@ -6,20 +6,12 @@ const Footer = () => {
 
     // backtotop start
 
-
     // Smooth scrolling with gradual steps
     const smoothScrollToTop = () => {
-        const scrollStep = -window.scrollY / 50; // Controls speed (smaller number = slower)
-        const scrollInterval = setInterval(() => {
-            if (window.scrollY !== 0) {
-                window.scrollBy(0, scrollStep);
-            } else {
-                clearInterval(scrollInterval);
-            }
-        }, 15); // Interval duration in milliseconds
+        window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
-    // backtotop end 
+    // backtotop end
 
 
 

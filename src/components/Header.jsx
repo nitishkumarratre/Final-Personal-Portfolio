@@ -7,17 +7,18 @@ const Header = () => {
 
     // Smooth scrolling with gradual steps
     const smoothScrollToTop = () => {
-        const scrollStep = -window.scrollY / 50; // Controls speed (smaller number = slower)
-        const scrollInterval = setInterval(() => {
-            if (window.scrollY !== 0) {
-                window.scrollBy(0, scrollStep);
-            } else {
-                clearInterval(scrollInterval);
-            }
-        }, 15); // Interval duration in milliseconds
+        window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
     // backtotop end
+
+    // Function to close the navbar on mobile after menu click
+    const closeNavbar = () => {
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        if (navbarToggle) {
+            navbarToggle.click(); // Simulate a click to close the navbar
+        }
+    };
 
     return (
         <>
@@ -62,19 +63,16 @@ const Header = () => {
                                     </ul>
                                 </li>
                                 <li>
-                                    <a className="smooth-menu" href="#services">Services</a>
+                                    <a className="smooth-menu" href="#services" onClick={closeNavbar}>Services</a>
                                 </li>
                                 <li>
-                                    <a className="smooth-menu" href="#portfolio">Portfolio</a>
+                                    <a className="smooth-menu" href="#portfolio" onClick={closeNavbar}>Portfolio</a>
                                 </li>
                                 <li>
-                                    <a className="smooth-menu" href="#resume">Resume</a>
+                                    <a className="smooth-menu" href="#resume" onClick={closeNavbar}>Resume</a>
                                 </li>
-                                {/* <li>
-                                        <a className="smooth-menu" href="#pricing">Pricing</a>
-                                    </li> */}
                                 <li>
-                                    <a className="smooth-menu" href="#contact">contact</a>
+                                    <a className="smooth-menu" href="#contact" onClick={closeNavbar}>Contact</a>
                                 </li>
                             </ul>
                         </div>

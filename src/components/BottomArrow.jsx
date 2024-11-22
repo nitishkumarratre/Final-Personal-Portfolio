@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { throttle } from 'lodash';
 
 const BottomArrow = () => {
 
@@ -6,31 +7,20 @@ const BottomArrow = () => {
 
     const [isVisible, setIsVisible] = useState(false);
 
-    // Show the button when the user scrolls down
     useEffect(() => {
         const toggleVisibility = () => {
-            if (window.scrollY > 300) {
-                setIsVisible(true);
-            } else {
-                setIsVisible(false);
-            }
+            setIsVisible(window.scrollY > 300);
         };
 
-        window.addEventListener("scroll", toggleVisibility);
-        return () => window.removeEventListener("scroll", toggleVisibility);
+        const throttledToggle = throttle(toggleVisibility, 200);
+        window.addEventListener("scroll", throttledToggle);
+        return () => window.removeEventListener("scroll", throttledToggle);
     }, []);
 
-    // Smooth scrolling with gradual steps
     const smoothScrollToTop = () => {
-        const scrollStep = -window.scrollY / 50; // Controls speed (smaller number = slower)
-        const scrollInterval = setInterval(() => {
-            if (window.scrollY !== 0) {
-                window.scrollBy(0, scrollStep);
-            } else {
-                clearInterval(scrollInterval);
-            }
-        }, 15); // Interval duration in milliseconds
+        window.scrollTo({ top: 0, behavior: "smooth" });
     };
+
 
     // backtotop end 
 
