@@ -24,7 +24,7 @@ const Footer = () => {
                     <div className="row">
                         <div className="col-lg-8 offset-lg-2">
                             <div className="footer-items text-center">
-                                <a href="#" className="footer-logot"><img src="assets/img/logo.png" alt="Image Not Found" /></a>
+                                <a href="#" className="footer-logot"><img src="assets/img/mlogo.png" alt="Image Not Found" /></a>
                                 <ul className="foter-menu">
                                     <li><NavLink onClick={smoothScrollToTop} to='/'>Home</NavLink></li>
                                     <li><a href="#services">Services</a></li>

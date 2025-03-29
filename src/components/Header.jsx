@@ -43,19 +43,19 @@ const Header = () => {
                                 <i className="fa fa-bars" />
                             </button>
                             <NavLink onClick={smoothScrollToTop} className="navbar-brand" to="/">
-                                <img src="assets/img/logo.png" className="logo" alt="Logo" />
+                                <img src="assets/img/mlogo.png" className="logo" alt="Logo" />
                             </NavLink>
 
                         </div>
                         {/* End Header Navigation */}
                         {/* Collect the nav links, forms, and other content for toggling */}
                         <div className="collapse navbar-collapse" id="navbar-menu">
-                            <img src="assets/img/logo.png" alt="Logo" />
+                            <img src="assets/img/mlogo.png" alt="Logo" />
                             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                                 <i className="fa fa-times" />
                             </button>
-                            <ul className="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                                <li className="dropdown">
+                            <ul className="nav navbar-nav navbar-right gap-10" data-in="fadeInDown" data-out="fadeOutUp">
+                                <li className="dropdown mx-3">
                                     <a href="#" className="dropdown-toggle active" data-toggle="dropdown">Home</a>
                                     <ul className="dropdown-menu">
                                         <li><a href="/">Home Version Light</a></li>
@@ -63,16 +63,20 @@ const Header = () => {
                                     </ul>
                                 </li>
                                 <li>
-                                    <a className="smooth-menu" href="#services" onClick={closeNavbar}>Services</a>
+                                    <a className="smooth-menu mx-3" href="#services" onClick={closeNavbar}>Services</a>
                                 </li>
                                 <li>
-                                    <a className="smooth-menu" href="#portfolio" onClick={closeNavbar}>Portfolio</a>
+                                    <a className="smooth-menu mx-3" href="#portfolio" onClick={closeNavbar}>Portfolio</a>
                                 </li>
                                 <li>
-                                    <a className="smooth-menu" href="#resume" onClick={closeNavbar}>Resume</a>
+                                    <a className="smooth-menu mx-3" href="#skills" onClick={closeNavbar}>Skills</a>
+                                </li>
+
+                                <li>
+                                    <a className="smooth-menu mx-3" href="#resume" onClick={closeNavbar}>Resume</a>
                                 </li>
                                 <li>
-                                    <a className="smooth-menu" href="#contact" onClick={closeNavbar}>Contact</a>
+                                    <a className="smooth-menu mx-3" href="#contact" onClick={closeNavbar}>Contact</a>
                                 </li>
                             </ul>
                         </div>
@@ -83,7 +87,8 @@ const Header = () => {
                                 <div className="attr-nav attr-box">
                                     <ul>
                                         <li className="button">
-                                            <a className="smooth-menu" href="#contact">Let's Talk <i className="fas fa-comment-alt" /></a>
+                                            {/* <a className="smooth-menu" href="NITISH_KUMAR.pdf">See Resume!!! <i className="fas fa-comment-alt" /></a> */}
+                                            <a className="smooth-menu" href="NITISH_KUMAR.pdf" target='_blank'>My Resume!!! </a>
                                         </li>
                                     </ul>
                                 </div>

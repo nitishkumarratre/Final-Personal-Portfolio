@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import Footer from './Footer';
-import PromoBox from './PromoBox';
+import Footer from '../components/Footer';
+import PromoBox from '../components/PromoBox';
 import { NavLink } from 'react-router-dom';
-import BottomArrow from './BottomArrow';
+import BottomArrow from '../components/BottomArrow';
 
 
 const ServicesDetails = () => {
+
+
+
+
 
     // smoothScrollToTop start
 
@@ -44,19 +48,19 @@ const ServicesDetails = () => {
                                     <i className="fa fa-bars" />
                                 </button>
                                 <NavLink onClick={smoothScrollToTop} className="navbar-brand" to="/">
-                                    <img src="assets/img/logo.png" className="logo" alt="Logo" />
+                                    <img src="assets/img/mlogo.png" className="logo" alt="Logo" />
                                 </NavLink>
 
                             </div>
                             {/* End Header Navigation */}
                             {/* Collect the nav links, forms, and other content for toggling */}
                             <div className="collapse navbar-collapse" id="navbar-menu">
-                                <img src="assets/img/logo.png" alt="Logo" />
+                                <img src="assets/img/mlogo.png" alt="Logo"/>
                                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                                     <i className="fa fa-times" />
                                 </button>
-                                <ul className="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                                    <li className="dropdown">
+                                <ul className="nav navbar-nav navbar-right gap-10" data-in="fadeInDown" data-out="fadeOutUp">
+                                    <li className="dropdown mx-3">
                                         <a href="#" className="dropdown-toggle active" data-toggle="dropdown">Home</a>
                                         <ul className="dropdown-menu">
                                             <li><a href="/">Home Version Light</a></li>
@@ -64,19 +68,21 @@ const ServicesDetails = () => {
                                         </ul>
                                     </li>
                                     <li>
-                                        <NavLink className="smooth-menu" to="/#services">Services</NavLink>
+                                        <a className="smooth-menu mx-3" href="/#services" >Services</a>                                        
+
                                     </li>
                                     <li>
-                                        <NavLink className="smooth-menu" to="/#portfolio">Portfolio</NavLink>
+                                        <a className="smooth-menu mx-3" href="/#portfolio" >Portfolio</a>
                                     </li>
                                     <li>
-                                        <NavLink className="smooth-menu" to="/#resume">Resume</NavLink>
+                                        <a className="smooth-menu mx-3" href="/#skills" >Skills</a>
                                     </li>
-                                    {/* <li>
-                                        <a className="smooth-menu" href="#pricing">Pricing</a>
-                                    </li> */}
+
                                     <li>
-                                        <NavLink className="smooth-menu" to="/#contact">contact</NavLink>
+                                        <a className="smooth-menu mx-3" href="/#resume" >Resume</a>
+                                    </li>
+                                    <li>
+                                        <a className="smooth-menu mx-3" href="/#contact" >Contact</a>
                                     </li>
                                 </ul>
                             </div>
@@ -87,7 +93,8 @@ const ServicesDetails = () => {
                                     <div className="attr-nav attr-box">
                                         <ul>
                                             <li className="button">
-                                                <a className="smooth-menu" href="#contact">Let's Talk <i className="fas fa-comment-alt" /></a>
+                                                {/* <a className="smooth-menu" href="#contact">Let's Talk <i className="fas fa-comment-alt" /></a> */}
+                                                <a className="smooth-menu" href="NITISH_KUMAR.pdf" target='_blank'>My Resume!!! </a>
                                             </li>
                                         </ul>
                                     </div>
@@ -101,7 +108,6 @@ const ServicesDetails = () => {
                     </nav>
                     {/* End Navigation */}
                 </header>
-
                 {/* End Header */}
                 {/* Start Breadcrumb  */}
                 <div className="breadcrumb-area text-center">
@@ -412,7 +418,25 @@ const ServicesDetails = () => {
 
                 {/* Start Footer  */}
 
-                <Footer />
+                <footer className="default-padding bg-cover" style={{ backgroundImage: 'url(assets/img/shape/1.jpg)' }}>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-8 offset-lg-2">
+                                <div className="footer-items text-center">
+                                    <a href="#" className="footer-logot"><img src="assets/img/logo.png" alt="Image Not Found" /></a>
+                                    <ul className="foter-menu">
+                                        <li><NavLink onClick={smoothScrollToTop} to='/'>Home</NavLink></li>
+                                        <li><NavLink to="/#services">Services</NavLink></li>
+                                        <li><NavLink to="/#portfolio">Portfolio</NavLink></li>
+                                        <li><NavLink to="/#blog">Blog</NavLink></li>
+                                        <li><NavLink to="/#contact">Contact</NavLink></li>
+                                    </ul>
+                                    <p>Copyright © 2024 nitishkumarratre. All Rights Reserved</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
 
                 {/* End Footer */}
 

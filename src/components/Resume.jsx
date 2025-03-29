@@ -14,12 +14,6 @@ const Resume = () => {
                             <h4 className="sub-title">RESUME</h4>
                             <h2 className="title">See my expertise</h2>
 
-                            <h4 className="sub-title">
-                                <a className="smooth-menu" href="NITISH_KUMAR.pdf" target='_blank'>
-                                    DOWNLOAD <i className="fas fa-download" />
-                                </a>
-                            </h4>
-
                         </div>
 
                     </div>

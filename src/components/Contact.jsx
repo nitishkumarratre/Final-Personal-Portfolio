@@ -214,7 +214,7 @@ const Contact = () => {
                         </div>
                     </div>
                     <div className="contact-illustration">
-                        <img src="assets/img/illustration/5.png" alt="Image Not Found" />
+                        <img src="assets/img/illustration/nkr.png" alt="Image Not Found" />
                         <img src="assets/img/shape/13.png" alt="Image Not Found" />
                     </div>
                 </div>

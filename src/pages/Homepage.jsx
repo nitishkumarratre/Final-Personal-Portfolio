@@ -5,10 +5,10 @@ import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
 import Resume from '../components/Resume';
 import Contact from '../components/Contact';
-import { NavLink } from 'react-router-dom';
 import Footer from '../components/Footer';
 import PromoBox from '../components/PromoBox';
 import BottomArrow from '../components/BottomArrow';
+import Skills from '../components/Skills';
 
 
 
@@ -110,7 +110,7 @@ const Homepage = () => {
                                             </span>
                                         </h2>
                                         <p>
-                                            Hi, my name is Nitish Kumar Ratre and I began using WordPress when it first began. I’ve spent most of my waking hours for the last ten years designing, programming and operating WordPress sites.
+                                            Hi, my name is Nitish Kumar Ratre. With a decade of experience in the IT industry, I have been designing, developing, and managing software solutions.
                                         </p>
                                         <div className="flex-social mt-40">
                                             <div className="button">
@@ -159,17 +159,17 @@ const Homepage = () => {
                                 <div className="fun-fact-style-one-items">
                                     <div className="fun-fact">
                                         <div className="counter">
-                                            <div className="timer" data-to={12} data-speed={1000}>12</div>
+                                            <div className="timer" data-to={1} data-speed={1000}>1</div>
                                             <div className="operator">+</div>
                                         </div>
                                         <span className="medium">Years of Experience</span>
                                     </div>
                                     <div className="fun-fact">
                                         <div className="counter">
-                                            <div className="timer" data-to={138} data-speed={1000}>138</div>
+                                            <div className="timer" data-to={10} data-speed={1000}>10</div>
                                             <div className="operator">+</div>
                                         </div>
-                                        <span className="medium">Projects completed on 30 countries</span>
+                                        <span className="medium">Projects completed on Delhi NCR</span>
                                     </div>
                                 </div>
                                 <div className="clieents-list mt-40">
@@ -181,7 +181,7 @@ const Homepage = () => {
                                             <img src="assets/img/team/17.jpg" alt="Image Not Found" />
                                         </div>
                                         <div className="info">
-                                            <h5>20K+ Clients</h5>
+                                            <h5>0K+ Clients</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -227,108 +227,11 @@ const Homepage = () => {
 
                 {/* End Portfolio */}
 
-                {/* Start Fun Fact  */}
-                <div className="fun-factor-area default-padding overflow-hidden">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-8 offset-lg-2">
-                                <div className="site-heading text-center">
-                                    <h4 className="sub-title">Top Skills</h4>
-                                    <h2 className="title">See my expertise</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="container">
-                        <div className="fun-fact-style-two-items text-center">
-                            {/* Single item */}
-                            <div className="funfact-style-two-item wow fadeInUp">
-                                <div className="icon">
-                                    <img src="assets/img/icon/xd.png" alt="Image Not Found" />
-                                </div>
-                                <div className="fun-fact">
-                                    <div className="counter">
-                                        <div className="timer" data-to={80} data-speed={2000}>80</div>
-                                        <div className="operator">%</div>
-                                    </div>
-                                    <span className="medium">Adobe XD</span>
-                                </div>
-                            </div>
-                            {/* End Single item */}
-                            {/* Single item */}
-                            <div className="funfact-style-two-item wow fadeInUp" data-wow-delay="100ms">
-                                <div className="icon">
-                                    <img src="assets/img/icon/figma.png" alt="Image Not Found" />
-                                </div>
-                                <div className="fun-fact">
-                                    <div className="counter">
-                                        <div className="timer" data-to={90} data-speed={2000}>90</div>
-                                        <div className="operator">%</div>
-                                    </div>
-                                    <span className="medium">Figma</span>
-                                </div>
-                            </div>
-                            {/* End Single item */}
-                            {/* Single item */}
-                            <div className="funfact-style-two-item wow fadeInUp" data-wow-delay="200ms">
-                                <div className="icon">
-                                    <img src="assets/img/icon/wordpress.png" alt="Image Not Found" />
-                                </div>
-                                <div className="fun-fact">
-                                    <div className="counter">
-                                        <div className="timer" data-to={70} data-speed={2000}>70</div>
-                                        <div className="operator">%</div>
-                                    </div>
-                                    <span className="medium">WordPress</span>
-                                </div>
-                            </div>
-                            {/* End Single item */}
-                            {/* Single item */}
-                            <div className="funfact-style-two-item wow fadeInUp" data-wow-delay="300ms">
-                                <div className="icon">
-                                    <img src="assets/img/icon/photoshop.png" alt="Image Not Found" />
-                                </div>
-                                <div className="fun-fact">
-                                    <div className="counter">
-                                        <div className="timer" data-to={80} data-speed={2000}>80</div>
-                                        <div className="operator">%</div>
-                                    </div>
-                                    <span className="medium">Photoshop</span>
-                                </div>
-                            </div>
-                            {/* End Single item */}
-                            {/* Single item */}
-                            <div className="funfact-style-two-item wow fadeInUp" data-wow-delay="400ms">
-                                <div className="icon">
-                                    <img src="assets/img/icon/diamon.png" alt="Image Not Found" />
-                                </div>
-                                <div className="fun-fact">
-                                    <div className="counter">
-                                        <div className="timer" data-to={60} data-speed={2000}>60</div>
-                                        <div className="operator">%</div>
-                                    </div>
-                                    <span className="medium">Sketch</span>
-                                </div>
-                            </div>
-                            {/* End Single item */}
-                            {/* Single item */}
-                            <div className="funfact-style-two-item wow fadeInUp" data-wow-delay="500ms">
-                                <div className="icon">
-                                    <img src="assets/img/icon/ai.png" alt="Image Not Found" />
-                                </div>
-                                <div className="fun-fact">
-                                    <div className="counter">
-                                        <div className="timer" data-to={90} data-speed={2000}>90</div>
-                                        <div className="operator">%</div>
-                                    </div>
-                                    <span className="medium">Illustrator</span>
-                                </div>
-                            </div>
-                            {/* End Single item */}
-                        </div>
-                    </div>
-                </div>
-                {/* End Fun Factor */}
+                {/* Start Skills Fact  */}
+
+                <Skills />
+
+                {/* End Skills Factor */}
 
                 {/* Start Timeline */}
                 <Resume />
@@ -667,7 +570,7 @@ const Homepage = () => {
                 <BottomArrow />
 
                 {/* arrow for back to top end  */}
-                
+
             </div>
 
         </>
