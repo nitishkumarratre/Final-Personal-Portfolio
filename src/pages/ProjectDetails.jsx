@@ -65,20 +65,20 @@ const ProjectDetails = () => {
                                         </ul>
                                     </li>
                                     <li>
-                                        <a className="smooth-menu mx-3" href="/#services" >Services</a>
+                                        <a onClick={smoothScrollToTop} className="smooth-menu mx-3" href="/#services" >Services</a>
                                     </li>
                                     <li>
-                                        <a className="smooth-menu mx-3" href="/#portfolio" >Portfolio</a>
+                                        <a onClick={smoothScrollToTop} className="smooth-menu mx-3" href="/#portfolio" >Portfolio</a>
                                     </li>
                                     <li>
-                                        <a className="smooth-menu mx-3" href="/#skills" >Skills</a>
+                                        <a onClick={smoothScrollToTop} className="smooth-menu mx-3" href="/#skills" >Skills</a>
                                     </li>
 
                                     <li>
-                                        <a className="smooth-menu mx-3" href="/#resume" >Resume</a>
+                                        <a onClick={smoothScrollToTop} className="smooth-menu mx-3" href="/#resume" >Resume</a>
                                     </li>
                                     <li>
-                                        <a className="smooth-menu mx-3" href="/#contact" >Contact</a>
+                                        <a onClick={smoothScrollToTop} className="smooth-menu mx-3" href="/#contact" >Contact</a>
                                     </li>
                                 </ul>
                             </div>{/* /.navbar-collapse */}

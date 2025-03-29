@@ -172,6 +172,7 @@ const Contact = () => {
                                                 name="phone"
                                                 placeholder="Phone*"
                                                 type="text"
+                                                required
                                                 onChange={handlePhoneChange} // Add this handler for phone change
                                             />
                                         </div>

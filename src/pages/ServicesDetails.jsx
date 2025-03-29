@@ -10,7 +10,6 @@ const ServicesDetails = () => {
 
 
 
-
     // smoothScrollToTop start
 
     // Smooth scrolling with gradual steps
@@ -47,9 +46,9 @@ const ServicesDetails = () => {
                                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                                     <i className="fa fa-bars" />
                                 </button>
-                                <NavLink onClick={smoothScrollToTop} className="navbar-brand" to="/">
+                                <a onClick={smoothScrollToTop} className="navbar-brand" href="/">
                                     <img src="assets/img/mlogo.png" className="logo" alt="Logo" />
-                                </NavLink>
+                                </a>
 
                             </div>
                             {/* End Header Navigation */}
@@ -75,7 +74,7 @@ const ServicesDetails = () => {
                                         <a className="smooth-menu mx-3" href="/#portfolio" >Portfolio</a>
                                     </li>
                                     <li>
-                                        <a className="smooth-menu mx-3" href="/#skills" >Skills</a>
+                                        <a  className="smooth-menu mx-3" href="/#skills" >Skills</a>
                                     </li>
 
                                     <li>
@@ -117,7 +116,7 @@ const ServicesDetails = () => {
                                 <h1>Professional service websites design</h1>
                                 <nav aria-label="breadcrumb">
                                     <ol className="breadcrumb">
-                                        <li><NavLink to="/"><i className="fas fa-home" /> Home</NavLink></li>
+                                        <li><a href="/"><i className="fas fa-home" /> Home</a></li>
                                         <li className="active">Services</li>
                                     </ol>
                                 </nav>

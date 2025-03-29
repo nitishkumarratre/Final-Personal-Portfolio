@@ -1,9 +1,10 @@
 import React from 'react'
 
 const Skills = () => {
+
     return (
         <>
-           <div id='skills' className="fun-factor-area default-padding overflow-hidden">
+           <div id="skills" className="fun-factor-area default-padding ">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-8 offset-lg-2">

@@ -60,4 +60,4 @@ const BottomArrow = () => {
     )
 }
 
-export default BottomArrow
+export default BottomArrow;
