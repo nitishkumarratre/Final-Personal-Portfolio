@@ -93,7 +93,7 @@ const Homepage = () => {
                             <div className="col-lg-12">
                                 <div className="banner-style-one-items">
                                     <div className="info">
-                                        <h1>I👋 am NKR </h1>
+                                        <h1>I👋 am Nitish </h1>
                                         <h2>
                                             <span className="header-caption" id="page-top">
                                                 {/* type headline start*/}
