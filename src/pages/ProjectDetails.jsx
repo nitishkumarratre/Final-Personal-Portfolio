@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer';
 import BottomArrow from '../components/BottomArrow';
 import PromoBox from '../components/PromoBox';
@@ -7,12 +7,23 @@ import PromoBox from '../components/PromoBox';
 
 const ProjectDetails = () => {
 
+    const navigate = useNavigate();
+
+    const handleClick = (section) => {
+        // Navigate to the homepage
+        navigate("/", { replace: true });
+
+        // Scroll to the section with the provided id
+        setTimeout(() => {
+            window.location.hash = section;
+        }, 100);
+    };
+
 
 
 
     // backtotop start
 
-    // Smooth scrolling with gradual steps
     const smoothScrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
@@ -44,9 +55,9 @@ const ProjectDetails = () => {
                                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                                     <i className="fa fa-bars" />
                                 </button>
-                                <NavLink onClick={smoothScrollToTop} className="navbar-brand" to="/">
+                                <a onClick={smoothScrollToTop} className="navbar-brand" href="/">
                                     <img src="assets/img/mlogo.png" className="logo" alt="Logo" />
-                                </NavLink>
+                                </a>
 
                             </div>
                             {/* End Header Navigation */}
@@ -65,20 +76,29 @@ const ProjectDetails = () => {
                                         </ul>
                                     </li>
                                     <li>
-                                        <a onClick={smoothScrollToTop} className="smooth-menu mx-3" href="/#services" >Services</a>
+                                        <NavLink onClick={() => handleClick("#services")} className="smooth-menu mx-3" to="/">
+                                            Services
+                                        </NavLink>
                                     </li>
                                     <li>
-                                        <a onClick={smoothScrollToTop} className="smooth-menu mx-3" href="/#portfolio" >Portfolio</a>
+                                        <NavLink onClick={() => handleClick("#portfolio")} className="smooth-menu mx-3" to="/">
+                                            Portfolio
+                                        </NavLink>
                                     </li>
                                     <li>
-                                        <a onClick={smoothScrollToTop} className="smooth-menu mx-3" href="/#skills" >Skills</a>
-                                    </li>
-
-                                    <li>
-                                        <a onClick={smoothScrollToTop} className="smooth-menu mx-3" href="/#resume" >Resume</a>
+                                        <NavLink onClick={() => handleClick("#skills")} className="smooth-menu mx-3" to="/">
+                                            Skills
+                                        </NavLink>
                                     </li>
                                     <li>
-                                        <a onClick={smoothScrollToTop} className="smooth-menu mx-3" href="/#contact" >Contact</a>
+                                        <NavLink onClick={() => handleClick("#resume")} className="smooth-menu mx-3" to="/">
+                                            Resume
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink onClick={() => handleClick("#contact")} className="smooth-menu mx-3" to="/">
+                                            Contact
+                                        </NavLink>
                                     </li>
                                 </ul>
                             </div>{/* /.navbar-collapse */}
@@ -112,7 +132,7 @@ const ProjectDetails = () => {
                                 <h1>Digital marketing and analytical solution</h1>
                                 <nav aria-label="breadcrumb">
                                     <ol className="breadcrumb">
-                                        <li><a href="#"><i className="fas fa-home" /> Home</a></li>
+                                        <li><a href="/"><i className="fas fa-home" /> Home</a></li>
                                         <li className="active">Project</li>
                                     </ol>
                                 </nav>
@@ -276,7 +296,7 @@ const ProjectDetails = () => {
                         <div className="row">
                             <div className="col-lg-8 offset-lg-2">
                                 <div className="footer-items text-center">
-                                    <a href="#" className="footer-logot"><img src="assets/img/logo.png" alt="Image Not Found" /></a>
+                                    <a href="#" className="footer-logot"><img src="assets/img/mlogo.png" alt="Image Not Found" /></a>
                                     <ul className="foter-menu">
                                         <li><NavLink onClick={smoothScrollToTop} to='/'>Home</NavLink></li>
                                         <li><NavLink to="/#services">Services</NavLink></li>

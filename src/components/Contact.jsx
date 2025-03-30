@@ -1,9 +1,12 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify'; // Correct import
 import 'react-toastify/dist/ReactToastify.css'; // Import CSS for styling the alerts
 
 const Contact = () => {
+
+
+
     const form = useRef();
     const [messageStatus, setMessageStatus] = useState(null); // State for storing message status
     const [loading, setLoading] = useState(false); // State for loading spinner

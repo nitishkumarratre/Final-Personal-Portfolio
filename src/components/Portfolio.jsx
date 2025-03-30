@@ -1,27 +1,23 @@
 import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
 
 
 const Portfolio = () => {
 
-    const location = useLocation();
 
+    // useEffect hook to scroll to the top on page load/navigation
     useEffect(() => {
-        if (location.hash) {
-            const element = document.getElementById(location.hash.replace('#', ''));
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-    }, [location]);
-
+        smoothScrollToTop();  // Call the smooth scroll function
+    }, []);
 
     // smoothScrollToTop start
 
-    // Smooth scrolling with gradual steps
     const smoothScrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",  // Makes the scroll smooth
+        });
     };
 
     // smoothScrollToTop end
@@ -64,10 +60,10 @@ const Portfolio = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="icon">
-                                                        <a onClick={smoothScrollToTop} href="/project-details"><i className="fas fa-long-arrow-right" /></a>
+                                                        <NavLink onClick={smoothScrollToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
                                                     </div>
                                                 </div>
-                                                <h4><a onClick={smoothScrollToTop} href="/project-details">Document manager application</a></h4>
+                                                <h4><NavLink onClick={smoothScrollToTop} to="/project-details">Document manager application</NavLink></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -89,10 +85,10 @@ const Portfolio = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="icon">
-                                                        <a onClick={smoothScrollToTop} href="/project-details"><i className="fas fa-long-arrow-right" /></a>
+                                                        <NavLink onClick={smoothScrollToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
                                                     </div>
                                                 </div>
-                                                <h4><a onClick={smoothScrollToTop} href="/project-details">Dynamic mobile app development</a></h4>
+                                                <h4><NavLink onClick={smoothScrollToTop} to="/project-details">Dynamic mobile app development</NavLink></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -114,10 +110,10 @@ const Portfolio = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="icon">
-                                                        <a onClick={smoothScrollToTop} href="/project-details"><i className="fas fa-long-arrow-right" /></a>
+                                                        <NavLink onClick={smoothScrollToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
                                                     </div>
                                                 </div>
-                                                <h4><a onClick={smoothScrollToTop} href="/project-details">Printable professional brochure templates</a></h4>
+                                                <h4><NavLink onClick={smoothScrollToTop} to="/project-details">Printable professional brochure templates</NavLink></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -139,10 +135,10 @@ const Portfolio = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="icon">
-                                                        <a onClick={smoothScrollToTop} href="/project-details"><i className="fas fa-long-arrow-right" /></a>
+                                                        <NavLink onClick={smoothScrollToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
                                                     </div>
                                                 </div>
-                                                <h4><a onClick={smoothScrollToTop} href="/project-details">Create stunning product flexible mockups</a></h4>
+                                                <h4><NavLink onClick={smoothScrollToTop} to="/project-details">Create stunning product flexible mockups</NavLink></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -164,10 +160,10 @@ const Portfolio = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="icon">
-                                                        <a onClick={smoothScrollToTop} href="/project-details"><i className="fas fa-long-arrow-right" /></a>
+                                                        <NavLink onClick={smoothScrollToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
                                                     </div>
                                                 </div>
-                                                <h4><a onClick={smoothScrollToTop} href="/project-details">Decor design vectors illustrations</a></h4>
+                                                <h4><NavLink onClick={smoothScrollToTop} to="/project-details">Decor design vectors illustrations</NavLink></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -189,10 +185,10 @@ const Portfolio = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="icon">
-                                                        <a onClick={smoothScrollToTop} href="/project-details"><i className="fas fa-long-arrow-right" /></a>
+                                                        <NavLink onClick={smoothScrollToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
                                                     </div>
                                                 </div>
-                                                <h4><a onClick={smoothScrollToTop} href="/project-details">Making smart software smartphones</a></h4>
+                                                <h4><NavLink onClick={smoothScrollToTop} to="/project-details">Making smart software smartphones</NavLink></h4>
                                             </div>
                                         </div>
                                     </div>

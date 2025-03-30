@@ -11,8 +11,8 @@ import BottomArrow from '../components/BottomArrow';
 import Skills from '../components/Skills';
 
 
-
 const Homepage = () => {
+
 
     // for loading 
     useEffect(() => {
@@ -61,7 +61,7 @@ const Homepage = () => {
 
     return (
         <>
-            <div>
+            <div className='homepage'>
                 {/* preloader  */}
                 <div className="preloader">
                     <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
@@ -570,6 +570,7 @@ const Homepage = () => {
                 <BottomArrow />
 
                 {/* arrow for back to top end  */}
+                
 
             </div>
 

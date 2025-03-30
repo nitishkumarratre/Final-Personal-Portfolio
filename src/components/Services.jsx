@@ -1,26 +1,23 @@
 import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import { useLocation } from 'react-router-dom';
+
 
 const Services = () => {
 
-    const location = useLocation();
-
+    
+    // useEffect hook to scroll to the top on page load/navigation
     useEffect(() => {
-        if (location.hash) {
-            const element = document.getElementById(location.hash.replace('#', ''));
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-    }, [location]);
-
+        smoothScrollToTop();  // Call the smooth scroll function
+    }, []);
 
     // smoothScrollToTop start
 
-    // Smooth scrolling with gradual steps
     const smoothScrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",  // Makes the scroll smooth
+        });
     };
 
     // smoothScrollToTop end
@@ -28,6 +25,8 @@ const Services = () => {
 
     return (
         <>
+        
+        
             <div id="services" className="services-style-one-area default-padding bottom-less">
                 <div className="container">
                     <div className="row">
@@ -45,13 +44,13 @@ const Services = () => {
                         <div className="col-xl-3 col-md-6 mb-30 wow fadeInUp">
                             <div className="service-style-one-item">
                                 <img src="assets/img/icon/1.png" alt="Image Not Found" />
-                                <h4><a onClick={smoothScrollToTop} href="/services-details">Digital Marketing</a></h4>
+                                <h4><NavLink onClick={smoothScrollToTop} to="/services-details">Digital Marketing</NavLink></h4>
                                 <p>
                                     Continue indulged speaking the was horrible for domestic position. Seeing get rather.
                                 </p>
-                                <a onClick={smoothScrollToTop} href="/services-details" className="btn-style-four">
+                                <NavLink onClick={smoothScrollToTop} to="/services-details" className="btn-style-four">
                                     <div className="icon"><img src="assets/img/icon/arrow.png" alt="Image Not Found" /></div> Read More
-                                </a>
+                                </NavLink>
                             </div>
                         </div>
                         {/* End Single Item */}
@@ -59,13 +58,13 @@ const Services = () => {
                         <div className="col-xl-3 col-md-6 mb-30 active wow fadeInUp" data-wow-delay="200ms">
                             <div className="service-style-one-item active">
                                 <img src="assets/img/icon/2.png" alt="Image Not Found" />
-                                <h4><a onClick={smoothScrollToTop} href="/services-details">App Development</a></h4>
+                                <h4><NavLink onClick={smoothScrollToTop} to="/services-details">App Development</NavLink></h4>
                                 <p>
                                     Continue indulged speaking the was horrible for domestic position. Seeing get rather.
                                 </p>
-                                <a onClick={smoothScrollToTop} href="/services-details" className="btn-style-four">
+                                <NavLink onClick={smoothScrollToTop} to="/services-details" className="btn-style-four">
                                     <div className="icon"><img src="assets/img/icon/arrow.png" alt="Image Not Found" /></div> Read More
-                                </a>
+                                </NavLink>
                             </div>
                         </div>
                         {/* End Single Item */}
@@ -73,13 +72,13 @@ const Services = () => {
                         <div className="col-xl-3 col-md-6 mb-30 wow fadeInUp" data-wow-delay="400ms">
                             <div className="service-style-one-item">
                                 <img src="assets/img/icon/3.png" alt="Image Not Found" />
-                                <h4><a onClick={smoothScrollToTop} href="/services-details">UI/UX Design</a></h4>
+                                <h4><NavLink onClick={smoothScrollToTop} to="/services-details">UI/UX Design</NavLink></h4>
                                 <p>
                                     Continue indulged speaking the was horrible for domestic position. Seeing get rather.
                                 </p>
-                                <a onClick={smoothScrollToTop} href="/services-details" className="btn-style-four">
+                                <NavLink onClick={smoothScrollToTop} to="/services-details" className="btn-style-four">
                                     <div className="icon"><img src="assets/img/icon/arrow.png" alt="Image Not Found" /></div> Read More
-                                </a>
+                                </NavLink>
                             </div>
                         </div>
                         {/* End Single Item */}
@@ -87,13 +86,13 @@ const Services = () => {
                         <div className="col-xl-3 col-md-6 mb-30 wow fadeInUp" data-wow-delay="600ms">
                             <div className="service-style-one-item">
                                 <img src="assets/img/icon/4.png" alt="Image Not Found" />
-                                <h4><a onClick={smoothScrollToTop} href="/services-details">Web Design</a></h4>
+                                <h4><NavLink onClick={smoothScrollToTop} to="/services-details">Web Design</NavLink></h4>
                                 <p>
                                     Continue indulged speaking the was horrible for domestic position. Seeing get rather.
                                 </p>
-                                <a onClick={smoothScrollToTop} href="/services-details" className="btn-style-four">
+                                <NavLink onClick={smoothScrollToTop} to="/services-details" className="btn-style-four">
                                     <div className="icon"><img src="assets/img/icon/arrow.png" alt="Image Not Found" /></div> Read More
-                                </a>
+                                </NavLink>
                             </div>
                         </div>
                         {/* End Single Item */}

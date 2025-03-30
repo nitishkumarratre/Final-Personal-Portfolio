@@ -1,23 +1,37 @@
 import React, { useEffect, useState } from 'react'
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 import PromoBox from '../components/PromoBox';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import BottomArrow from '../components/BottomArrow';
 
 
 const ServicesDetails = () => {
 
+    const navigate = useNavigate();
 
+    const handleClick = (section) => {
+        // Navigate to the homepage
+        navigate("/", { replace: true });
+
+        // Scroll to the section with the provided id
+        setTimeout(() => {
+            window.location.hash = section;
+        }, 100);
+    };
 
 
     // smoothScrollToTop start
 
-    // Smooth scrolling with gradual steps
     const smoothScrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
     // smoothScrollToTop end
+
+
+
+
 
 
     return (
@@ -54,7 +68,7 @@ const ServicesDetails = () => {
                             {/* End Header Navigation */}
                             {/* Collect the nav links, forms, and other content for toggling */}
                             <div className="collapse navbar-collapse" id="navbar-menu">
-                                <img src="assets/img/mlogo.png" alt="Logo"/>
+                                <img src="assets/img/mlogo.png" alt="Logo" />
                                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                                     <i className="fa fa-times" />
                                 </button>
@@ -67,21 +81,29 @@ const ServicesDetails = () => {
                                         </ul>
                                     </li>
                                     <li>
-                                        <a className="smooth-menu mx-3" href="/#services" >Services</a>                                        
-
+                                        <NavLink onClick={() => handleClick("#services")} className="smooth-menu mx-3" to="/">
+                                            Services
+                                        </NavLink>
                                     </li>
                                     <li>
-                                        <a className="smooth-menu mx-3" href="/#portfolio" >Portfolio</a>
+                                        <NavLink onClick={() => handleClick("#portfolio")} className="smooth-menu mx-3" to="/">
+                                            Portfolio
+                                        </NavLink>
                                     </li>
                                     <li>
-                                        <a  className="smooth-menu mx-3" href="/#skills" >Skills</a>
-                                    </li>
-
-                                    <li>
-                                        <a className="smooth-menu mx-3" href="/#resume" >Resume</a>
+                                        <NavLink onClick={() => handleClick("#skills")} className="smooth-menu mx-3" to="/">
+                                            Skills
+                                        </NavLink>
                                     </li>
                                     <li>
-                                        <a className="smooth-menu mx-3" href="/#contact" >Contact</a>
+                                        <NavLink onClick={() => handleClick("#resume")} className="smooth-menu mx-3" to="/">
+                                            Resume
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink onClick={() => handleClick("#contact")} className="smooth-menu mx-3" to="/">
+                                            Contact
+                                        </NavLink>
                                     </li>
                                 </ul>
                             </div>
@@ -422,7 +444,7 @@ const ServicesDetails = () => {
                         <div className="row">
                             <div className="col-lg-8 offset-lg-2">
                                 <div className="footer-items text-center">
-                                    <a href="#" className="footer-logot"><img src="assets/img/logo.png" alt="Image Not Found" /></a>
+                                    <a href="#" className="footer-logot"><img src="assets/img/mlogo.png" alt="Image Not Found" /></a>
                                     <ul className="foter-menu">
                                         <li><NavLink onClick={smoothScrollToTop} to='/'>Home</NavLink></li>
                                         <li><NavLink to="/#services">Services</NavLink></li>

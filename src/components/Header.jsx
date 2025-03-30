@@ -5,7 +5,6 @@ const Header = () => {
 
     // backtotop start
 
-    // Smooth scrolling with gradual steps
     const smoothScrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
