@@ -60,10 +60,10 @@ const Portfolio = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="icon">
-                                                        <NavLink onClick={smoothScrollToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
+                                                        <NavLink onClick={smoothScrollToTop} to="/project-details"reloadDocument><i className="fas fa-long-arrow-right" /></NavLink>
                                                     </div>
                                                 </div>
-                                                <h4><NavLink onClick={smoothScrollToTop} to="/project-details">Document manager application</NavLink></h4>
+                                                <h4><NavLink onClick={smoothScrollToTop} to="/project-details"reloadDocument>Document manager application</NavLink></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -85,10 +85,10 @@ const Portfolio = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="icon">
-                                                        <NavLink onClick={smoothScrollToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
+                                                        <NavLink onClick={smoothScrollToTop} to="/project-details"reloadDocument><i className="fas fa-long-arrow-right" /></NavLink>
                                                     </div>
                                                 </div>
-                                                <h4><NavLink onClick={smoothScrollToTop} to="/project-details">Dynamic mobile app development</NavLink></h4>
+                                                <h4><NavLink onClick={smoothScrollToTop} to="/project-details"reloadDocument>Dynamic mobile app development</NavLink></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -110,10 +110,10 @@ const Portfolio = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="icon">
-                                                        <NavLink onClick={smoothScrollToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
+                                                        <NavLink onClick={smoothScrollToTop} to="/project-details"reloadDocument><i className="fas fa-long-arrow-right" /></NavLink>
                                                     </div>
                                                 </div>
-                                                <h4><NavLink onClick={smoothScrollToTop} to="/project-details">Printable professional brochure templates</NavLink></h4>
+                                                <h4><NavLink onClick={smoothScrollToTop} to="/project-details"reloadDocument>Printable professional brochure templates</NavLink></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -135,10 +135,10 @@ const Portfolio = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="icon">
-                                                        <NavLink onClick={smoothScrollToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
+                                                        <NavLink onClick={smoothScrollToTop} to="/project-details"reloadDocument><i className="fas fa-long-arrow-right" /></NavLink>
                                                     </div>
                                                 </div>
-                                                <h4><NavLink onClick={smoothScrollToTop} to="/project-details">Create stunning product flexible mockups</NavLink></h4>
+                                                <h4><NavLink onClick={smoothScrollToTop} to="/project-details"reloadDocument>Create stunning product flexible mockups</NavLink></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -160,10 +160,10 @@ const Portfolio = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="icon">
-                                                        <NavLink onClick={smoothScrollToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
+                                                        <NavLink onClick={smoothScrollToTop} to="/project-details"reloadDocument><i className="fas fa-long-arrow-right" /></NavLink>
                                                     </div>
                                                 </div>
-                                                <h4><NavLink onClick={smoothScrollToTop} to="/project-details">Decor design vectors illustrations</NavLink></h4>
+                                                <h4><NavLink onClick={smoothScrollToTop} to="/project-details"reloadDocument>Decor design vectors illustrations</NavLink></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -185,10 +185,10 @@ const Portfolio = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="icon">
-                                                        <NavLink onClick={smoothScrollToTop} to="/project-details"><i className="fas fa-long-arrow-right" /></NavLink>
+                                                        <NavLink onClick={smoothScrollToTop} to="/project-details"reloadDocument><i className="fas fa-long-arrow-right" /></NavLink>
                                                     </div>
                                                 </div>
-                                                <h4><NavLink onClick={smoothScrollToTop} to="/project-details">Making smart software smartphones</NavLink></h4>
+                                                <h4><NavLink onClick={smoothScrollToTop} to="/project-details"reloadDocument>Making smart software smartphones</NavLink></h4>
                                             </div>
                                         </div>
                                     </div>
